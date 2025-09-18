@@ -6,7 +6,7 @@ from PySide6.QtWidgets import QApplication
 from app import WallpaperApp
 
 
-CONFIG_PATH = os.path.expanduser("./config.json")
+CONFIG_PATH = os.path.expanduser("~/.config/huegen-gui.conf")
 
 
 def main():
@@ -15,18 +15,9 @@ def main():
     if not os.path.exists(CONFIG_PATH):
         default_config = {
             "wallpaper_dir": os.path.expanduser("~/Pictures"),
-            "wallpaper_command": "feh --bg-scale {path}",
+            "wallpaper_command": "swww img {path}",
             "thumbnail_size": 180,
-            "_command_examples": {
-                "feh": "feh --bg-scale {path}",
-                "swww": "swww img {path}",
-                "hyprpaper": "hyprctl hyprpaper wallpaper ,{path}",
-                "swaybg": "swaybg -i {path} -m fill",
-                "nitrogen": "nitrogen --set-zoom-fill {path}",
-                "gsettings": "gsettings set org.gnome.desktop.background picture-uri file://{path}",
-                "custom_with_different_placeholder": "your_command <selected image path>",
-            },
-        }
+       }
         try:
             with open(CONFIG_PATH, "w") as f:
                 json.dump(default_config, f, indent=2)
