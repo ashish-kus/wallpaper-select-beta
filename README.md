@@ -1,1 +1,0 @@
-Select - Wallpaper ( Beta )
