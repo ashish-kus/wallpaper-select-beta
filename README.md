@@ -2,6 +2,10 @@
 
 A lightweight, keyboard-friendly wallpaper picker built with PySide6. It scans a directory for images, shows them in a responsive grid with lazy-loading thumbnails, and runs your configured command to set the selected wallpaper.
 
+<center>
+  <img src="./assets/banner.png" alt="Banner" />
+</center>
+
 ### Features
 
 - Responsive grid with cropped thumbnails
